@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Blue</h1>
+
+    <p><a href="main.html">Main</a></p>
+
+    <a href="./red.html">Red</a>
+    <a href="./green.html">Green</a>
+    <a href="./blue.html">Blue</a>
+    
+    <div ng-view></div>
+
+    
+
+    <script text="Javascript" src="../AngularJS/ajax.googleapis.com_ajax_libs_angularjs_1.2.32_angular.min.js"></script>
+    <script text="Javascript">
+    var app = angular.module("myApp", [""]);
+    app.config(function($routeProvider) {
+      $routeProvider
+      .when("/", {
+        templateUrl : "main.html"
+      })
+      .when("/red", {
+        templateUrl : "red.html"
+      })
+      .when("/green", {
+        templateUrl : "green.html"
+      })
+      .when("/blue", {
+        templateUrl : "blue.htm"
+      });
+    });
+    </script>
+
+
+
+
+</body>
+</html>
